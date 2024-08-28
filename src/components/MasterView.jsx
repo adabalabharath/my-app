@@ -24,9 +24,7 @@ const MasterView = () => {
     setSelectedProductId(id);
     if (window.innerWidth < 750) {
       navigate(`/products/${id}`);
-    } else {
-      navigate("/products");
-    }
+    } 
   };
   return (
     <Grid container spacing={2}>

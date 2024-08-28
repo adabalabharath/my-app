@@ -25,7 +25,14 @@ const ProductsList = ({
       sx={{
         borderRadius: 2,
         m: 2,
-        border: isSelected ? "2px solid violet" : "none",
+         border: {
+          xs: "none",  // No border on small screens
+          sm: isSelected ? "2px solid violet" : "none", // Border on larger screens
+        },
+        transition:"transform 0.3s ease-in-out",
+        "&:hover": {
+          transform: "scale(1.02)",
+        },
       }}
       onClick={onClick}
     >
