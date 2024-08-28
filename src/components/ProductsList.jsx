@@ -72,7 +72,7 @@ const ProductsList = ({
                 textOverflow: "ellipsis",
                 display: "-webkit-box",
                 WebkitBoxOrient: "vertical",
-                WebkitLineClamp: 1, // Clamp the text to 2 lines
+                WebkitLineClamp: 1, // Clamp the text to 1 lines
                 color: "text.secondary",
               }}
             >
