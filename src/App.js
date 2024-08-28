@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import MasterView from "./components/MasterView";
+import { Navigate, Route, Routes } from "react-router-dom";
+import MobileDetail from "./components/MobileDetail";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<Navigate to="/products" replace />} />
+        <Route path="/products" element={<MasterView />} />
+        <Route path="products/:id" element={<MobileDetail />} />
+      </Routes>
+    </>
   );
 }
 
